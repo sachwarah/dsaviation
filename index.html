@@ -1,59 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DS Aviation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS Aviation | Independent Aviation Advisory</title>
+
+  <meta name="description" content="Independent aviation advisory with practical operational insight." />
+
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   >
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f4f7fb;
-      --text: #102033;
-      --accent: #1f5a92;
-    }
-
-    * {
-      box-sizing: border-box;
+      --navy: #163d7a;
+      --text: #243447;
+      --muted: #6b7a8c;
+      --bg: #f8f9fb;
+      --line: rgba(22, 61, 122, 0.35);
+      --panel: rgba(255, 255, 255, 0.88);
+      --panel-border: rgba(22, 61, 122, 0.08);
+      --soft-accent: #e8eef8;
     }
 
     body {
-      margin: 0;
-      background: linear-gradient(180deg, #e7eef7 0%, var(--bg) 100%);
+      font-family: 'Inter', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(22, 61, 122, 0.08), transparent 40%),
+        linear-gradient(to bottom, #ffffff 0%, var(--bg) 100%);
       color: var(--text);
     }
 
-    h1 {
-      color: var(--accent);
+    .content-panel {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 1.5rem;
+      box-shadow: 0 24px 60px rgba(25, 46, 84, 0.08);
+      backdrop-filter: blur(8px);
     }
 
-    p {
-      line-height: 1.6;
+    .eyebrow {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: var(--soft-accent);
+      color: var(--navy);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .contact {
-      font-weight: bold;
+    .logo {
+      color: var(--navy);
+    }
+
+    .logo-main {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.95rem;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .logo-ds {
+      font-size: clamp(2.7rem, 5.8vw, 4.2rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-aviation {
+      font-size: clamp(2.7rem, 5.8vw, 4.2rem);
+      font-weight: 300;
+      letter-spacing: 0.14em;
+    }
+
+    .logo-line {
+      width: 100%;
+      max-width: 420px;
+      height: 1px;
+      background: var(--line);
+      margin: 0.7rem auto 1rem;
+    }
+
+    .logo-sub {
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+
+    .intro {
+      max-width: 640px;
+    }
+
+    .lede {
+      color: var(--muted);
+    }
+
+    .contact-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact a {
+      min-width: 220px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      .logo-main {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .logo-line {
+        max-width: 260px;
+      }
+
+      .logo-sub {
+        letter-spacing: 0.2em;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="container py-5">
-    <section class="row justify-content-center">
-      <div class="col-md-10 col-lg-8">
-        <div class="card border-0 shadow-lg rounded-4 text-center">
-          <div class="card-body p-4 p-md-5">
-            <h1 class="display-5 fw-bold mb-3">DS Aviation</h1>
-            <p class="lead mb-3">Professional aviation services with a focus on safety, reliability, and operational excellence.</p>
-            <p class="mb-0">We support clients with practical aviation solutions tailored to modern industry needs.</p>
-            <p class="contact mt-4 mb-0">Contact: info@dsaviation.co.uk</p>
-          </div>
-        </div>
+  <main class="container py-5 text-center">
+    <div class="mx-auto" style="max-width: 900px;">
+
+    <!-- LOGO -->
+    <div class="logo mb-5">
+      <div class="logo-main">
+        <span class="logo-ds">DS</span>
+        <span class="logo-aviation">AVIATION</span>
+      </div>
+      <div class="logo-line"></div>
+      <div class="logo-sub">Independent Aviation Advisory</div>
+    </div>
+
+    <!-- CONTENT -->
+    <section class="content-panel px-4 px-md-5 py-5">
+      <div class="eyebrow mb-4">Operationally Grounded Advice</div>
+
+      <div class="intro mx-auto">
+        <h1 class="display-6 fw-normal mb-3" style="color: #122b57;">Independent aviation advisory rooted in operational experience</h1>
+
+        <p class="fs-5 lh-lg mb-3">
+          DS Aviation provides clear, independent advisory services shaped by practical
+          aviation insight and a disciplined understanding of operational realities.
+        </p>
+
+        <p class="lede fs-6 lh-lg mb-0">
+          Focused, discreet, and commercially aware support for clients who value sound
+          judgement and straightforward advice.
+        </p>
+      </div>
+
+      <div class="contact mt-5">
+        <a class="btn btn-primary btn-lg rounded-pill px-4" href="mailto:info@dsaviation.co.uk">Contact DS Aviation</a>
+        <p class="contact-note mt-3 mb-0">info@dsaviation.co.uk</p>
       </div>
     </section>
+
+    <footer class="pt-4">
+      <p class="text-secondary small mb-0">Independent aviation advisory based in the United Kingdom.</p>
+    </footer>
+    </div>
   </main>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
