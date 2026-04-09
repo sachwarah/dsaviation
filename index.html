@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DS Aviation | Independent Aviation Advisory</title>
 
-  <meta name="description" content="Independent aviation advisory with practical operational insight." />
+  <meta
+    name="description"
+    content="Independent aviation advisory for general aviation and business aviation operators."
+  />
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -14,27 +17,34 @@
     crossorigin="anonymous"
   >
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
       --navy: #163d7a;
+      --navy-dark: #122b57;
       --text: #243447;
-      --muted: #6b7a8c;
+      --muted: #667487;
       --bg: #f8f9fb;
       --line: rgba(22, 61, 122, 0.35);
-      --panel: rgba(255, 255, 255, 0.88);
+      --panel: rgba(255, 255, 255, 0.9);
       --panel-border: rgba(22, 61, 122, 0.08);
-      --soft-accent: #e8eef8;
     }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
       background:
         radial-gradient(circle at top, rgba(22, 61, 122, 0.08), transparent 40%),
         linear-gradient(to bottom, #ffffff 0%, var(--bg) 100%);
       color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page-wrap {
+      max-width: 920px;
     }
 
     .content-panel {
@@ -43,18 +53,6 @@
       border-radius: 1.5rem;
       box-shadow: 0 24px 60px rgba(25, 46, 84, 0.08);
       backdrop-filter: blur(8px);
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      background: var(--soft-accent);
-      color: var(--navy);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
     }
 
     .logo {
@@ -72,7 +70,7 @@
 
     .logo-ds {
       font-size: clamp(2.7rem, 5.8vw, 4.2rem);
-      font-weight: 400;
+      font-weight: 500;
       letter-spacing: 0.04em;
     }
 
@@ -92,17 +90,50 @@
 
     .logo-sub {
       text-transform: uppercase;
-      letter-spacing: 0.32em;
-      font-size: 0.85rem;
+      letter-spacing: 0.28em;
+      font-size: 0.84rem;
       font-weight: 400;
     }
 
     .intro {
-      max-width: 640px;
+      max-width: 700px;
+    }
+
+    .hero-title {
+      color: var(--navy-dark);
+      font-size: clamp(1.9rem, 4.2vw, 3rem);
+      line-height: 1.15;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-text {
+      font-size: 1.22rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      color: var(--text);
     }
 
     .lede {
       color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.75;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-ds {
+      background-color: #1f6feb;
+      border-color: #1f6feb;
+      min-width: 220px;
+      font-weight: 500;
+    }
+
+    .btn-ds:hover,
+    .btn-ds:focus {
+      background-color: #1a5fc7;
+      border-color: #1a5fc7;
     }
 
     .contact-note {
@@ -110,11 +141,10 @@
       font-size: 0.95rem;
     }
 
-    .contact a {
-      min-width: 220px;
+    .site-footer {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
-
-    /* MOBILE */
 
     @media (max-width: 600px) {
       .logo-main {
@@ -136,7 +166,17 @@
       }
 
       .logo-sub {
-        letter-spacing: 0.2em;
+        letter-spacing: 0.18em;
+        font-size: 0.75rem;
+      }
+
+      .hero-text {
+        font-size: 1.05rem;
+      }
+
+      .lede {
+        font-size: 0.97rem;
+        line-height: 1.7;
       }
     }
   </style>
@@ -144,47 +184,46 @@
 
 <body>
   <main class="container py-5 text-center">
-    <div class="mx-auto" style="max-width: 900px;">
+    <div class="page-wrap mx-auto">
 
-    <!-- LOGO -->
-    <div class="logo mb-5">
-      <div class="logo-main">
-        <span class="logo-ds">DS</span>
-        <span class="logo-aviation">AVIATION</span>
-      </div>
-      <div class="logo-line"></div>
-      <div class="logo-sub">Independent Aviation Advisory</div>
-    </div>
-
-    <!-- CONTENT -->
-    <section class="content-panel px-4 px-md-5 py-5">
-      <div class="eyebrow mb-4">Operationally Grounded Advice</div>
-
-      <div class="intro mx-auto">
-        <h1 class="display-6 fw-normal mb-3" style="color: #122b57;">Independent aviation advisory rooted in operational experience</h1>
-
-        <p class="fs-5 lh-lg mb-3">
-          DS Aviation provides clear, independent advisory services shaped by practical
-          aviation insight and a disciplined understanding of operational realities.
-        </p>
-
-        <p class="lede fs-6 lh-lg mb-0">
-          Focused, discreet, and commercially aware support for clients who value sound
-          judgement and straightforward advice.
-        </p>
+      <div class="logo mb-5">
+        <div class="logo-main">
+          <span class="logo-ds">DS</span>
+          <span class="logo-aviation">AVIATION</span>
+        </div>
+        <div class="logo-line"></div>
+        <div class="logo-sub">Independent Aviation Advisory</div>
       </div>
 
-      <div class="contact mt-5">
-        <a class="btn btn-primary btn-lg rounded-pill px-4" href="mailto:info@dsaviation.co.uk">Contact DS Aviation</a>
-        <p class="contact-note mt-3 mb-0">info@dsaviation.co.uk</p>
-      </div>
-    </section>
+      <section class="content-panel px-4 px-md-5 py-5">
+        <div class="intro mx-auto">
+          <h1 class="hero-title mb-4">
+            Operational advisory for general and business aviation
+          </h1>
 
-    <footer class="pt-4">
-      <p class="text-secondary small mb-0">Independent aviation advisory based in the United Kingdom.</p>
-    </footer>
+          <p class="hero-text">
+            DS Aviation provides independent, practical advisory support to general aviation and business aviation operators.
+          </p>
+
+          <p class="lede mb-0">
+            We assess how operations work in practice, identify where risk exists, and support proportionate improvements that strengthen safety, operational control, and resilience.
+          </p>
+        </div>
+
+        <div class="mt-5">
+          <a class="btn btn-primary btn-lg rounded-pill px-4 btn-ds" href="mailto:info@dsaviation.co.uk">
+            Make an enquiry
+          </a>
+          <p class="contact-note mt-3 mb-0">info@dsaviation.co.uk</p>
+        </div>
+      </section>
+
+      <footer class="pt-4">
+        <p class="site-footer mb-0">Independent aviation advisory based in the United Kingdom.</p>
+      </footer>
     </div>
   </main>
+
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
